@@ -1,0 +1,75 @@
+私有访问修饰符-private
+被声明为 private 的方法、变量和构造方法只能被所属类访问，并且类和接口不能声明为 private
+
+public class Logger {
+   private String format;
+   public String getFormat() {
+      return this.format;
+   }
+   public void setFormat(String format) {
+      this.format = format;
+   }
+}
+Logger 类中的 format 变量为私有变量，所以其他类不能直接得到和设置该变量的值。为了使其他类能够操作该变量，定义了两个 public 方法：getFormat() （返回 format的值）和 setFormat(String)（设置 format 的值）
+
+
+公有访问修饰符-public
+Java 程序的 main() 方法必须设置成公有的，否则，Java 解释器将不能运行该类。
+
+class AudioPlayer {
+   protected boolean openSpeaker(Speaker sp) {
+      // 实现细节
+   }
+}
+ 
+class StreamingAudioPlayer extends AudioPlayer {
+   protected boolean openSpeaker(Speaker sp) {
+      // 实现细节
+   }
+}
+
+如果把 openSpeaker() 方法声明为 private，那么除了 AudioPlayer 外，其他类将不能访问该方法。
+
+如果把 openSpeaker() 声明为 public，那么所有的类都能够访问该方法。
+
+如果我们只想让该方法对其所在类的子类可见，则将该方法声明为 protected。
+
+——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+非访问修饰符
+
+static 修饰符
+1.静态变量
+2.静态方法
+
+final 修饰符
+1.final 变量：变量一旦赋值后，不能被重新赋值
+2. final 方法：父类中的 final 方法可以被子类继承，但是不能被子类重写
+
+abstract 修饰符
+1. 抽象类：
+2. 抽象方法
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
