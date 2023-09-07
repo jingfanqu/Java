@@ -1,0 +1,19 @@
+HashSet:
+
+一个不允许有重复元素的集合。
+实际上，HashSet 是使用 HashMap 的一个包装，其中存储的每个元素都是 HashMap 的键，而这些键映射的值都是一个共同的、静态的对象。
+
+HashMap:
+
+存储键值对的数据结构，其中键是唯一的。
+
+主要方法:
+HashSet:
+
+add(), remove(), contains(), size(), 等。
+HashMap:
+
+put(key, value), get(key), remove(key), containsKey(key), containsValue(value), size(), 等。
+
+HashSet: 当你想要存储一个唯一元素的集合并快速查找元素是否存在于集合中时。
+HashMap: 当你需要存储键值对并基于键快速查找值时。
