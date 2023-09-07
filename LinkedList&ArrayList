@@ -1,0 +1,13 @@
+1. ArrayList:基于动态数组实现
+
+随机访问（例如，get和set操作）很快，因为它基于数组，所以可以直接跳到任何位置。
+插入和删除操作可能会慢，特别是在列表的中间，因为可能需要移动部分元素以适应更多的元素或关闭空隙。
+
+2. LinkedList:基于双向链表实现
+
+随机访问较慢，因为从头开始遍历链表直到达到所需位置。
+插入和删除操作更快，尤其是在迭代期间，因为只需要更改节点的引用。
+
+ArrayList和LinkedList都提供了List接口的方法，如add(), get(), remove(), contains()等。
+
+LinkedList具有额外的方法来支持从列表的开头和结尾插入和删除元素，如addFirst(), addLast(), removeFirst(), removeLast()等
